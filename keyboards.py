@@ -2,7 +2,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # Клавиатура главного меню
 kb = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
-    [KeyboardButton('📜Статистика')],
+    # [KeyboardButton('/start')],  # ТЕСТОВАЯ ВРЕМЕННАЯ КНОПКА
+    [KeyboardButton('📜Статистика'), KeyboardButton('🌡️Установить лимит')],
     [KeyboardButton('🆘Помощь')]
 ])
 

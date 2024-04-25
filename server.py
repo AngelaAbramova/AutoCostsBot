@@ -57,6 +57,13 @@ async def cmd_statistic_kb(message: types.Message) -> None:
 async def cmd_help_kb(message: types.Message) -> None:
     await message.answer(text=HELP_MESSAGE, parse_mode="HTML", reply_markup=kb)
 
+@dp.message_handler(Text(equals='🌡️Установить лимит'))
+async def cmd_limit_kb(message: types.Message) -> None:
+    await get_limit(message)
+    await message.delete()
+
+
+
 # Обработка сообщений для установки лимита на расходы
 @dp.message_handler(lambda message: Filter.is_handler_limit(message.text))
 async def cmd_set_limit(message: types.Message) -> None:

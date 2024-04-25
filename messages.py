@@ -1,5 +1,4 @@
 """Сообщения для пользователей"""
-
 from utils import CostData, get_time_is_year, LimitData
 
 BAD_TEXT_MESSAGE = '❌Неправильный текст сообщения❌'
